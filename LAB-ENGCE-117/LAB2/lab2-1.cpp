@@ -28,9 +28,27 @@
     Output :
     	dlroW olleH
 */
-#inclue
+#include <stdio.h>
+#include <string.h>
 
-void reverse( char str1[], char str2[] ) ;
+void reverse( char str1[], char str2[] ) {
+    int i, j;
+
+
+    strcpy(str2, str1);
+
+    for (i = 0, j = 9; i < j; i++, j--) {
+
+        char temp = str2[i];
+        str2[i] = str2[j];
+        str2[j] = temp;
+
+    }
+
+    printf("Original: %s\n",str1) ;
+
+    printf("Reversed: %s\n", str2) ;
+}//end function
 
 int main() {
     char text[ 50 ] = "I Love You" ;
